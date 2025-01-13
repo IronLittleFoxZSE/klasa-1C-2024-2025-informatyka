@@ -121,7 +121,7 @@ void task()
 	std::cout << randomNumber << "\n";
 
 	int numberFromUser;
-
+	/*
 	std::cout << "Podaj liczbê:\n";
 	std::cin >> numberFromUser;
 	if (numberFromUser == randomNumber)
@@ -147,7 +147,16 @@ void task()
 			}
 		}
 	}
+	*/
 
+	do
+	{
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> numberFromUser;
+		if (numberFromUser == randomNumber)
+			std::cout << "Gratulacje !!!";
+	} while (numberFromUser != randomNumber);
+	
 }
 
 int main()
@@ -159,5 +168,5 @@ int main()
 	//task3();
 	//task4();
 
-	task();
+	task1();
 }
