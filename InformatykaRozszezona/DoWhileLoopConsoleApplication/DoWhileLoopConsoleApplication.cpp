@@ -51,6 +51,56 @@ void task1()
 
 }
 
+//Napisz program, który ma pobraæ od u¿ytkownika liczbê dodatni¹. 
+//Zabezpiecz program przed pobieraniem liczb ujemnych.
+void task2()
+{
+	int numberFromUser;
+
+	do 
+	{
+		std::cout << "Podaj liczbê dodatnia:\n";
+		std::cin >> numberFromUser;
+	} while (numberFromUser < 0);
+
+	std::cout << "Liczba dodatnia podana przez uzytkownika " << numberFromUser << "\n";
+}
+
+//Napisz program, który policzy sumê cyfr podanej przez u¿ytkownika liczby.
+void task3()
+{
+	int number;
+	std::cout << "Podaj liczbê\n";
+	std::cin >> number;
+
+	int rest, sum = 0;
+
+	/*
+	rest = number % 10;
+	sum = sum + rest;
+	number = number / 10;
+	if (number != 0)
+	{
+		rest = number % 10;
+		sum = sum + rest;
+		number = number / 10;
+		if (number != 0)
+		{
+			//....
+		}
+	}
+	*/
+
+	do
+	{
+		rest = number % 10;
+		sum = sum + rest;
+		number = number / 10;
+	} while (number != 0);
+
+	std::cout << "Suma wynosi " << sum << "\n";
+}
+
 int main()
 {
 	task1();
